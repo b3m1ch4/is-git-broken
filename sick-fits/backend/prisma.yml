@@ -1,6 +1,2 @@
-endpoint: US/s1ck-f1ts/dev
+endpoint: https://us1.prisma.sh/micha-4ab2da/sick-fits/dev
 datamodel: datamodel.prisma
-
-generate:
-  - generator: javascript-client
-    output: ./generated/prisma-client/
