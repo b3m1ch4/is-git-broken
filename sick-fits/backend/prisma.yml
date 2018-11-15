@@ -1,0 +1,6 @@
+endpoint: US/s1ck-f1ts/dev
+datamodel: datamodel.prisma
+
+generate:
+  - generator: javascript-client
+    output: ./generated/prisma-client/

@@ -6,3 +6,5 @@ haters/
 .build/
 layout.md
 variables.env
+sick-fits/backend/node_modules
+sick-fits/frontend/node_modules
