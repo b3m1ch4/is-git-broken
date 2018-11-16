@@ -1,2 +1,2 @@
-endpoint: https://us1.prisma.sh/micha-4ab2da/sick-fits/dev
+endpoint: ${env:PRISMA_ENDPOINT}
 datamodel: datamodel.prisma
