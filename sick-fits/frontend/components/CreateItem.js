@@ -4,7 +4,25 @@ import gql from 'graphql-tag';
 import Form from './styles/Form';
 import formatMoney from '../lib/formatMoney';
 
-const CREATE_ITEM_MUTATION
+const CREATE_ITEM_MUTATION = gql`
+  mutation CREATE_ITEM_MUTATION(
+      $title: String!
+      $description: String!
+      $price: Int!
+      $image: String
+      $largeImage: String
+      ) {
+    createItem(
+      title: $title
+      description: $description
+      price: $price
+      image: $image
+      largeImage: $largeImage
+    ) {
+      id
+    }
+  }
+`;
 
 export default class CreateItem extends Component {
   state = {
@@ -16,7 +34,7 @@ export default class CreateItem extends Component {
   };
   handleChange = (event) => {
     const { name, type, value } = event.target;
-    console.log({ name, type, value} );
+    console.log( {name, type, value} );
     const val = type === 'number' ? parseFloat(value) : value;
     this.setState({ [name]: val })
   };
@@ -71,3 +89,5 @@ export default class CreateItem extends Component {
     )
   }
 }
+
+export { CREATE_ITEM_MUTATION };
